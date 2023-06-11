@@ -50,10 +50,17 @@ class UserController extends Controller
             }
         }
 
-        // LIMITAR OS CAMPOS ENVIADOS PARA AS VIEWS!!!!!
-        $users = User::where($conditions)->with('users_state')->with('users_city')->paginate();
+        $fields = [
+            'id',
+            'name',
+            'state_id',
+            'city_id',
+            'gender',
+            'cpf',
+            'birth'
+        ];
 
-        // dd($users);
+        $users = User::where($conditions)->with('users_state')->with('users_city')->select($fields)->paginate();
 
         return view('blade_views.users.index', compact('users', 'states', 'cities'));
     }
