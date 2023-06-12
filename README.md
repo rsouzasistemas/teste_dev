@@ -35,7 +35,8 @@ Quando a implementação do Docker estiver concluída, bastará subir a imagem e
 - Clone o repositório para seu local de preferência. Obs: Não pretendo ensinar (não no momento), como criar um ambiente de trabalho local, pressuponho que você já sabe fazer isso.
 - Entre na pasta do projeto e abra o Terminal ou CLI de sua preferência.
 - Execute o composer install.
-- O projeto usa o Bootstrap como framework CSS padrão, composer require laravel/ui.
+- php artisan key:generate
+- O projeto usa o Bootstrap como framework CSS padrão, execute: composer require laravel/ui.
 - php artisan ui bootstrap.
 - npm install
 - npm run dev (se quiser brincar com o hot reload) ou use o npm run build.
