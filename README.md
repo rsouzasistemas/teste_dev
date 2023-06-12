@@ -48,3 +48,16 @@ Seguindo esses passos, o projeto será executado tranquilamente.
 
 - Existe dentro de app/ uma pasta chamada "__ExtraTables". Nela estão contidos 2 arquivos SQL: states.sql e cities.sql. Estes arquivos são utilizados durante o Seed, para popular as tabelas de respectivos nomes, mantendo o padrão de nomes. As listas são de 2022, então espero que em Cities ainda não tenha mudado nada.
 - Caso tenha alguma dúvida sobre as rotas disponíveis na API, execute: php artisan route:list e poderá notar 2 rotas "extras", api/states, que retorna a lista de estados e seus IDs e api/cities/{stateId?} que retorna a lista completa de cidades e seus IDs, mas, como parâmetro opcional, você pode fornecer o ID do estado, assim somente as cidades ligadas a este ID serão retornadas.
+- Note que na lista de rotas, existe um GET e um POST para api/users. Com o GET você obterá uma lista paginada de todos os usuários. Já com o POST, você poderá aplicar filtros e obterá uma lista paginada somente com os resultados deste filtro.
+- Todos os campos podem ser usados como parâmetro de filtro, com excessão de "password", que só pode ser preenchido durante o cadastro ou edição de um usuário. Os campos de Users são:
+-- state_id
+-- city_id
+-- name
+-- email
+-- password
+-- gender
+-- cpf
+-- birth
+-- address
+
+Em breve anexarei o link da documentação online da API.

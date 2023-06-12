@@ -20,6 +20,11 @@ use Illuminate\Support\Facades\Route;
 //     return $request->user();
 // });
 
-Route::apiResource('/users', UserController::class);
+Route::get('/users', [UserController::class, 'index'])->name('index');
+Route::post('/users', [UserController::class, 'index'])->name('index');
+Route::post('users/store', [UserController::class, 'store'])->name('store');
+Route::put('users/update/{id}', [UserController::class, 'update'])->name('update');
+Route::delete('users/delete/{id}', [UserController::class, 'destroy'])->name('delete');
+
 Route::get('/states', [StatesController::class, 'index'])->name('index');
 Route::get('/cities/{stateId?}', [CitiesController::class, 'index'])->name('index');
