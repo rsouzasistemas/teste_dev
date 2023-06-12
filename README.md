@@ -41,3 +41,10 @@ Quando a implementação do Docker estiver concluída, bastará subir a imagem e
 - npm run dev (se quiser brincar com o hot reload) ou use o npm run build.
 - Certifique-se de que configurou o .env.
 - php artisan migrate --seed (sim, vem com 101 dálmatas, digo, usuários para você testar!).
+
+Seguindo esses passos, o projeto será executado tranquilamente.
+
+## Algumas observações
+
+- Existe dentro de app/ uma pasta chamada "__ExtraTables". Nela estão contidos 2 arquivos SQL: states.sql e cities.sql. Estes arquivos são utilizados durante o Seed, para popular as tabelas de respectivos nomes, mantendo o padrão de nomes. As listas são de 2022, então espero que em Cities ainda não tenha mudado nada.
+- Caso tenha alguma dúvida sobre as rotas disponíveis na API, execute: php artisan route:list e poderá notar 2 rotas "extras", api/states, que retorna a lista de estados e seus IDs e api/cities/{stateId?} que retorna a lista completa de cidades e seus IDs, mas, como parâmetro opcional, você pode fornecer o ID do estado, assim somente as cidades ligadas a este ID serão retornadas.
