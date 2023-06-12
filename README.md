@@ -37,7 +37,6 @@ Quando a implementação do Docker estiver concluída, bastará subir a imagem e
 - Execute o composer install.
 - php artisan key:generate
 - O projeto usa o Bootstrap como framework CSS padrão.
-- php artisan ui bootstrap.
 - npm install
 - npm run dev (se quiser brincar com o hot reload) ou use o npm run build.
 - Certifique-se de que configurou o .env.
