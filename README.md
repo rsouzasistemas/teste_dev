@@ -36,7 +36,7 @@ Quando a implementação do Docker estiver concluída, bastará subir a imagem e
 - Entre na pasta do projeto e abra o Terminal ou CLI de sua preferência.
 - Execute o composer install.
 - php artisan key:generate
-- O projeto usa o Bootstrap como framework CSS padrão, execute: composer require laravel/ui.
+- O projeto usa o Bootstrap como framework CSS padrão.
 - php artisan ui bootstrap.
 - npm install
 - npm run dev (se quiser brincar com o hot reload) ou use o npm run build.
